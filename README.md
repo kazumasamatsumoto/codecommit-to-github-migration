@@ -90,3 +90,7 @@ git config --global --get-all credential.helper
 
 - 各自 `git remote set-url origin https://github.com/<owner>/<repo>.git`
 - CodeCommit 側は IAM で `codecommit:GitPush` を Deny して読み取り専用にし、並走期間後に削除
+
+## 関連資料
+
+- [GitHub Copilot: Claude Opus 5.5 の利用料金まとめ](docs/copilot-opus-5.5-pricing.md)
