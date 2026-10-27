@@ -124,6 +124,8 @@ $repos | ForEach-Object {
 
 ## 1. リハーサル(事前移行)
 
+スクリプトを使う前に、まず 1 リポジトリを手作業で移管して仕組みを把握することを推奨します。手順は [manual-migration.md](manual-migration.md) にあります。
+
 切り替え前に一度まるごと移行し、問題を洗い出します。まず dry-run で対象と動作を確認します。
 
 ```powershell

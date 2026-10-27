@@ -94,5 +94,6 @@ git config --global --get-all credential.helper
 ## 関連資料
 
 - [リポジトリ引っ越し手順](docs/migration-steps.md) : 棚卸しから凍結、本移行、周辺の切り替え、後片付けまで
+- [手作業で 1 リポジトリを移管する](docs/manual-migration.md) : スクリプトが内部でやっている各コマンドを順に手で実行する。まずこれで仕組みを把握してからスクリプトを使う
 - [GitHub でマージを制御する](docs/github-merge-rules.md) : 承認数、マージできる人の限定、Copilot 併用時の注意点
 - [GitHub Copilot: Claude Opus 5.5 の利用料金まとめ](docs/copilot-opus-5.5-pricing.md)
