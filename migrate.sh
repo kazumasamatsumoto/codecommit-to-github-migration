@@ -67,7 +67,8 @@ fi
 [ ${#REPOS[@]} -gt 0 ] || die "対象リポジトリがありません (引数で指定するか --all)"
 
 # CodeCommit へは aws CLI の認証情報をそのまま使う credential helper で接続する
-GIT_CC=(git -c "credential.helper=!aws codecommit credential-helper \$@" -c credential.UseHttpPath=true)
+# 先頭の空指定で既存の credential helper を無効化してから aws の helper を使う
+GIT_CC=(git -c credential.helper= -c "credential.helper=!aws codecommit credential-helper \$@" -c credential.UseHttpPath=true)
 HAS_LFS=0; command -v git-lfs >/dev/null && HAS_LFS=1
 
 mkdir -p "$WORK_DIR"

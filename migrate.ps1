@@ -61,7 +61,8 @@ function Invoke-Cmd {
 }
 
 # CodeCommit へは aws CLI の認証情報をそのまま使う credential helper で接続する
-$GitCC = @("-c", "credential.helper=!aws codecommit credential-helper `$@", "-c", "credential.UseHttpPath=true")
+# 先頭の空指定で Git Credential Manager などの既存 helper を無効化してから aws の helper を使う
+$GitCC = @("-c", "credential.helper=", "-c", "credential.helper=!aws codecommit credential-helper `$@", "-c", "credential.UseHttpPath=true")
 
 # ---- 事前チェック -----------------------------------------------------------
 foreach ($tool in "aws", "gh", "git") {
